@@ -1,7 +1,7 @@
 var book = require('./lib/grade.js').book1;
 var express = require('express');
 var app = express();
-
+var port = process.env.PORT || 3000;
 
 app.get("/", function (req, res) {
     res.send("Hello mark wong world");
@@ -23,8 +23,6 @@ app.get("/grade", function (req, res) {
 });
 
 
-
-
-app.listen(3000);
+app.listen(port, () => console.log('Server is running on port' + port));
 
 console.log("server ready..............");
