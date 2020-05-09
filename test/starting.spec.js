@@ -8,5 +8,17 @@ describe('Basic Mocha test', function () {
         assert.equal(book.getGradeNumber(), 0);
         book.addGrade(1);
         assert.equal(book.getGradeNumber(), 1);
+        book.clearAllGrades();
+        assert.equal(book.getGradeNumber(), 0);
     })
+
+    it('Test average work', function () {
+        book.clearAllGrades();
+        assert.equal(book.getGradeNumber(), 0);
+        book.addGrade(10);
+        assert.equal(book.getAverage(), 10);
+        book.addGrade(50);
+        assert.equal(book.getAverage(), 30);
+    })
+
 });
