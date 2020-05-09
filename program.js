@@ -7,8 +7,6 @@ app.get("/", function (req, res) {
     res.send("Hello mark wong world");
 });
 
-
-
 app.get("/grade", function (req, res) {
 
     var grades = req.query.grades.split(",");
@@ -21,7 +19,6 @@ app.get("/grade", function (req, res) {
     res.send("Your average is " + average);
 
 });
-
 
 app.listen(port, () => console.log('Server is running on port' + port));
 
